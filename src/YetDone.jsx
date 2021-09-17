@@ -17,7 +17,7 @@ export default function YetDone({todos, toggleTodo, deleteTodo}) {
                     <p>Deadline: {yetdone.deadline}</p>
                     <div className="action">
                         <button id="addSubmit" type="submit" onClick={handleTodoClick.bind(this, yetdone)} className="green">Mark as Done</button> 
-                        <Delete key={yetdone.id} deleteTodo={deleteTodo} todo = {yetdone} />
+                        <Delete deleteTodo={deleteTodo} todo = {yetdone} />
                     </div>
                 </div>
             ))}

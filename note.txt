@@ -1,0 +1,11 @@
+const newTodos = todos.map((todo) => {
+  if (todo.id === id) {
+    return {
+      ...todo,
+      complete: true,
+    };
+  }
+
+  return todo;
+});
+

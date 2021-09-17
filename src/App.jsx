@@ -31,7 +31,7 @@ function App() {
         return [...prevTodos, {id: uuidv4(), name: name, deadline: deadline, complete: false}]
       })
       todoNameRef.current.value = null
-      todoDeadlineRef.current.value = null;
+      todoDeadlineRef.current.value = null
     }
 
     function handleOnchangeSearch(event) {
@@ -68,7 +68,7 @@ function App() {
           <form id="inputBook">
 
             <div  className="input card">
-              <label htmlFor="todoName">Todo Title</label>
+              <label htmlFor="todoName"> Todo Title</label>
               <input id="todoName" ref={todoNameRef} type="text" name="name" required/>
             </div>
 
@@ -84,8 +84,8 @@ function App() {
 
       <Search todos={todos} handleOnchangeSearch={handleOnchangeSearch}/>
 
-      <TodoList key={uuidv4()} todos = {todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} check="Undone"/>
-      <TodoList key={uuidv4()} todos = {todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} check= "done"/>
+      <TodoList todos = {todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} check="Undone"/>
+      <TodoList todos = {todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} check= "Done"/>
     </main>
     
     </>
